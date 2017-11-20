@@ -1,9 +1,399 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <title>Задача «Морда»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
+    <input class="settings setButton" id="settings" type="checkbox">
+    <input class="visitedB" id="visitedB" type="checkbox"
+        checked>
+    <input class="jokesB" id="jokesB" type="checkbox" checked>
+    <input class="showsButton" id="showsButton" type="checkbox" checked>
+    <input class="carB" id="carB" type="checkbox"
+        checked>
+    <input class="weatherButton" id="weatherButton" type="checkbox"
+        checked>
+    <input class="trafficButton" id="trafficButton" type="checkbox"
+        checked>
+    <input class="mapButton" id="mapButton" type="checkbox" checked>
+    <input class="announcementsButton" id="announcementsButton" type="checkbox"
+        checked>
+    <input class="joke1" id="joke1" name="jokeButtons" type="radio"
+        checked>
+    <input class="joke2" id="joke2" name="jokeButtons" type="radio">
+    <input class="joke3" id="joke3" name="jokeButtons" type="radio">
+    <input class="joke4" id="joke4" name="jokeButtons" type="radio">
+    <input class="joke5" id="joke5" name="jokeButtons" type="radio">
+
+    <header>
+        <section class="headLine">
+            <div class="geo">
+                <span>➤</span> Екатеринбург</div>
+            <div class="settingsList">
+                <label for="settings" class="settings">Настройка</label>
+                <div class="options">
+                    <div>
+                        <label for="visitedB">
+                            <span class="buttonImg1"><span>Посещаемое</span></span></label>
+                        </div>
+                    <div>
+                        <label for="jokesB">
+                            <span class="buttonImg2"><span>Лучшие анекдоты</span></span></label>
+                        </div>
+                    <div>
+                        <label for="showsButton">
+                            <span class="buttonImg3"><span>Телепрограмма</span></span></label>
+                        </div>
+                    <div>
+                        <label for="carB">
+                            <span class="buttonImg4"><span>Автомобильные новости</span></span></label>
+                        </div>
+                    <div>
+                        <label for="weatherButton">
+                            <span class="buttonImg5"><span>Погода</span></span></label>
+                        </div>
+                    <div>
+                        <label for="trafficButton">
+                            <span class="buttonImg6"><span>Пробки</span></span></label>
+                        </div>
+                    <div>
+                        <label for="mapButton">
+                            <span class="buttonImg7"><span>Карта Екатеринбурга</span></span></label>
+                        </div>
+                    <div>
+                        <label for="announcementsButton">
+                            <span class="buttonImg8"><span>Афиша</span></span></label>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="login">
+            <span class="name">
+                <span class="firstLetter">l</span>ogin</span>
+            <span>Почта
+                <span class="details">новых нет</span>
+            </span>
+            <span>Написать письмо</span>
+            <span>Диск</span>
+        </section>
+    </header>
+    <div class="left">
+    </div>
+    <div class="center">
+        <div class="top">
+            <div class="newsColumn">
+                <header>
+                    <div class="massMedia">
+                        <a href="https://yandex.ru/">Сейчас в СМИ</a>
+                    </div>
+                    <div class="localMedia">
+                        <a href="https://yandex.ru/">в Екатеринбурге</a>
+                    </div>
+                    <div class="dateAndTime">16 ноября, четверг 13
+                        <div class="timeColumn">:</div>23</div>
+                </header>
+
+                <ul>
+                    <li>Колобков: Россия заслуживает к себе другого
+                        отношения со стороны WADA</li>
+                    <li>Путин обсудил с главами ДНР и ЛНР идею по
+                        обмену пленными в Донбассе</li>
+                    <li>Полеты L-410 в Хабаровском крае не приостановлены</li>
+                    <li>Принят единогласно: Дума приняла закон о
+                        СМИ-иноагентах
+                    </li>
+                    <li>Опубликовано видео ударов ВКС по боевикам
+                        в Сирии</li>
+                </ul>
+                <div class="wrapper">
+                    <div class="description dollar">USD ЦБ</div>
+                    <div class="dollar">60,25</div>
+                    <span class="hiddenDescr hidden1">курс ЦБ РФ на 18/11</span>
+                    <div class="description euro">EUR ЦБ</div>
+                    <div class="euro">71,17</div>
+                    <span class="hiddenDescr hidden2">курс ЦБ РФ на 18/11</span>
+                    <div class="description petrol">НЕФТЬ</div>
+                    <div class="petrol">61,84</div>
+                    <span class="petrol change">+2,13%</span>
+                    <span class="hiddenDescr hidden3">цена на 17/11</span>
+                    <span class="more">...</span>
+                    <span class="hiddenDescr hidden4">ещё</span>
+                </div>
+            </div>
+            <div class="settings"></div>
+            <div class="yandexAd">
+                <a href="https://yandex.ru/" target="_blank">
+                    <img class="yandexAdImg" src="yandexAd.png" alt="Yandex ad">
+                </a>
+                <a>Платите за
+                    <br>любимые игры</a>
+                <p>на Яндекс.Деньгах</p>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="logo"></div>
+            <article class="searchElements">
+                <div class="categories">
+                    <a>Видео</a>
+                    <a>Картинки</a>
+                    <a>Новости</a>
+                    <a>Карты</a>
+                    <a>Маркет</a>
+                    <a>Переводчик</a>
+                    <a>Музыка</a>
+                    <a>ещё</a>
+                </div>
+                <div class="searchLine">
+                    <input type="text" required>
+                    <button role="button">Найти</button>
+                    <img class="mic" src="mic.jpg" alt="microphone icon for search line">
+                    <img class="keyboard" src="keyboard.jpg" alt="keyboard icon for search line">
+                </div>
+                <div class="example">
+                    <p>Найдётся всё. Например,
+                        <a href="https://yandex.ru/">что такое гридница</a>
+                    </p>
+                </div>
+                <div>
+                    <a href="https://yandex.ru/" target="_blank">
+                        <img src="ad.png" alt="Another ad picture">
+                    </a>
+                </div>
+            </article>
+        </div>
+        <div class="bot">
+            <div class="visited">
+                <h1>
+                    <a>Посещаемое</a>
+                </h1>
+                <div>
+                    <span class="botCategory">Маркет</span> -
+                    <span>китайская распродажа</span>
+                </div>
+                <div>
+                    <span class="botCategory">Авто.ру</span> -
+                    <span>Туссан третьей серии</span>
+                </div>
+                <div>
+                    <span class="botCategory">Недвижимость</span> -
+                    <span>двушки со скидкой</span>
+                </div>
+                <div>
+                    <span class="botCategory">Работа</span> -
+                    <span>уборщица</span>
+                </div>
+                <div>
+                    <span class="botCategory">Здоровье</span> -
+                    <span>поговорите с врачом</span>
+                </div>
+                <div>
+                    <span class="botCategory">Музыка</span> -
+                    <span>найденная в 60-х</span>
+                </div>
+                <div>
+                    <span class="botCategory">Коллекции</span> -
+                    <span>дизайн спальни</span>
+                </div>
+            </div>
+            <div class="jokes">
+                <h1>
+                    <a>Лучшие анекдоты</a>
+                </h1>
+                <span class="firstJoke joke">
+                    <span class="jokeDescription">Раздел:
+                        <a href="https://yandex.ru/">Медицинские</a>.</span>
+                    <span class="jokeContent">- Вас лечить хорошо или бесплатно?</span>
+                </span>
+                <span class="secondJoke joke">
+                    <span class="jokeDescription">Раздел:
+                        <a href="https://yandex.ru/">Очень смешные</a>.</span>
+                    <span class="jokeContent">Только мы берём листовки у метро не для того,
+                        чтобы узнать, что там, а чтобы помочь
+                        раздающему.
+                    </span>
+
+                </span>
+                <span class="thirdJoke joke">
+                    <span class="jokeDescription">Раздел:
+                        <a href="https://yandex.ru/">Очень смешные</a>.</span>
+                    <span class="jokeContent">Стабильность – это признак отсутствие идей…</span>
+                </span>
+                <span class="fourthJoke joke">
+                    <span class="jokeDescription">Раздел:
+                        <a href="https://yandex.ru/">Очень смешные</a>.</span>
+                    <span class="jokeContent">Все грибы съедобны, но некоторые - всего
+                        лишь один раз.
+                    </span>
+                </span>
+                <span class="fifthJoke joke">
+                    <span class="jokeDescription">Раздел:
+                        <a href="https://yandex.ru/">Очень смешные</a>.</span>
+                    <span class="jokeContent">Всё самое лучшее происходит либо во сне,
+                        любо в кино, либо не со мной.</span>
+                </span>
+                <label class="showMore" for="joke1">
+                    <span class="refreshImg"></span> Показать ещё</label>
+                <label class="showMore" for="joke2">
+                    <span class="refreshImg"></span> Показать ещё</label>
+                <label class="showMore" for="joke3">
+                    <span class="refreshImg"></span> Показать ещё</label>
+                <label class="showMore" for="joke4">
+                    <span class="refreshImg"></span> Показать ещё</label>
+                <label class="showMore" for="joke5">
+                    <span class="refreshImg"></span> Показать ещё</label>
+            </div>
+            <div class="shows">
+                <h1>
+                    <a>Телепрограмма</a>
+                    <span class="gradientTV">ТВ онлайн &#9658;</span>
+                </h1>
+                <span>17:05
+                    <span class="name">Женский доктор-2</span>
+                    <span class="channel">41 Домашний</span>
+                </span>
+                <span>17:30
+                    <span class="name">Детективы</span>
+                    <span class="channel">Пятый канал</span>
+                </span>
+                <span>17:30
+                    <span class="name">Слепая</span>
+                    <span class="channel">ТВ-3</span>
+                </span>
+                <span>17:30
+                    <span class="name">Реальные пацаны</span>
+                    <span class="channel">ТНТ</span>
+                </span>
+                <span>17:40
+                    <span class="name">Вести Урал</span>
+                    <span class="channel">Россия 1</span>
+                </span>
+                <span>18:00
+                    <span class="name">Воронины</span>
+                    <span class="channel">СТС</span>
+                </span>
+            </div>
+            <div class="carNews">
+                <h1>
+                    <a>Автомобильные новости</a>
+                </h1>
+                <div class="blurTop"></div>
+                <div class="blurBot"></div>
+                <div class="scrollArea">
+                    <span>
+                        <span class="text">Правительство поддержало законопроект
+                            о регистрации машиномест
+                        </span>
+                        <span class="timeCar">12:19</span>
+                    </span>
+                    <span>
+                        <span class="text">Обзор нового Mitsubishi, за которым выстроилась
+                            очередь
+                        </span>
+                        <span class="timeCar">12:01</span>
+                    </span>
+                    <span>
+                        <span class="text">Лады оснастят системой управления со
+                            смартфона
+                        </span>
+                        <span class="timeCar">11:40</span>
+                    </span>
+                    <span>
+                        <span class="text">В Китае представили спорткар с двигателем
+                            от Focus RS</span>
+                        <span class="timeCar">11:30</span>
+                    </span>
+                    <span>
+                        <span class="text">Священник отчитал прихожан, а они заставили
+                            его продать Porshe</span>
+                        <span class="timeCar">12/11</span>
+                    </span>
+                    <span>
+                        <span class="text">Священник отчитал прихожан, а они заставили
+                            его продать Porshe</span>
+                        <span class="timeCar">12/11</span>
+                    </span>
+                    <span>
+                        <span class="text">Священник отчитал прихожан, а они заставили
+                            его продать Porshe</span>
+                        <span class="timeCar">12/11</span>
+                    </span>
+                </div>
+
+            </div>
+            <div class="thirdColumn">
+                <div class="weather">
+                    <div class="weatherMainBlock">
+                        <h1>
+                            <a>Погода</a>
+                            <img src="https://yastatic.net/weather/i/icons/turbo/light/bkn_-sn_d.svg"
+                                alt="weather Icon">
+                            <span class="tempNow">-3 °C</span>
+                        </h1>
+                    </div>
+                    <span>
+                        <span class="day">День -2</span>,
+                        <span class="night">вечер -3</span>
+                    </span>
+                </div>
+                <div class="traffic">
+                    <h1>
+                        <a>Пробки</a>
+                        <img src="traffic.png" alt="traffic Icon">
+                        <span>3 балла</span>
+                    </h1>
+                    <span>Местами затруднения</span>
+                </div>
+                <div class="map">
+                    <h1>
+                        <a>Карта Екатеринбурга</a>
+                    </h1>
+                    <div class="firstLine">
+                        <span>Такси</span>
+                        <span>Расписания</span>
+                    </div>
+                    <div class="secondLine">
+                        <span>Международные автобусы</span>
+                    </div>
+                </div>
+                <div class="announcements">
+                    <h1>
+                        <a>Афиша</a>
+                    </h1>
+                    <span>
+                        <span class="showName">Тор: Рагнарёк</span>
+                        <span class="type">фэнтези</span>
+                    </span>
+                    <span>
+                        <span class="showName">Лига справедливости</span>
+                        <span class="type">премьера</span>
+                    </span>
+                    <span>
+                        <span class="showName">Последний богатырь</span>
+                        <span class="type">приключения</span>
+                    </span>
+                    <span>
+                        <span class="showName">Мифы</span>
+                        <span class="type">премьера</span>
+                    </span>
+                    <span class="fifth">
+                        <span class="showName">Убийство в Восточном...</span>
+                        <span class="fullInfo">Убийство в Восточном экспрессе</span>
+                        <span class="type">драма</span>
+                    </span>
+                    <span class="concerts">
+                        <span class="typeConcert">Концерты</span> -
+                        <span class="singer">the Hatters</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right"></div>
 </body>
+
 </html>

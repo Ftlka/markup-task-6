@@ -1,0 +1,832 @@
+body
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: 'h h h'
+        'left center right';
+}
+
+.left
+{
+    grid-area: left;
+}
+
+.center
+{
+    grid-area: center;
+}
+
+.right
+{
+    grid-area: right;
+}
+
+header
+{
+    margin-top: 20px;
+    grid-area: h;
+}
+
+.headLine
+{
+    height: 58px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.geo span
+{
+    display: inline-block;
+    transform: scale(1.1) rotate(-45deg);
+}
+
+.geo
+{
+    margin-left: 18px;
+    color: #999;
+}
+
+.geo:hover,
+.headLine label:hover,
+.login span:hover,
+.login span:hover span
+{
+    cursor: pointer;
+    color: #c00;
+    transition: color .15s ease-out;
+}
+
+.options input
+{
+    margin-left: -1px;
+}
+
+body > input
+{
+    display: none;
+}
+
+.visitedB:checked ~ .center .visited
+{
+    visibility: visible;
+}
+
+.visitedB:not(:checked) ~ .jokesB:not(:checked) ~ .center .bot
+{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'shows thirdColumn thirdColumn'
+        'carNews thirdColumn thirdColumn';
+}
+
+.showsButton:not(:checked) ~ .carB:not(:checked) ~ .center .bot
+{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'visited thirdColumn thirdColumn'
+        'jokes thirdColumn thirdColumn';
+}
+
+.visitedB:not(:checked) ~ .carB:not(:checked) ~ .center .bot
+{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'thirdColumn thirdColumn thirdColumn'
+        'thirdColumn thirdColumn thirdColumn';
+}
+
+.shows,
+.carNews
+{
+    width: 270px;
+}
+
+.visitedB:not(:checked) ~ .jokesB:not(:checked) ~ .center .thirdColumn
+{
+    margin-left: 40px;
+}
+
+.buttonImg1,
+.buttonImg2,
+.buttonImg3,
+.buttonImg4,
+.buttonImg5,
+.buttonImg6,
+.buttonImg7,
+.buttonImg8
+{
+    margin-bottom: 10px;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.buttonImg1 span,
+.buttonImg2 span,
+.buttonImg3 span,
+.buttonImg4 span,
+.buttonImg5 span,
+.buttonImg6 span,
+.buttonImg7 span,
+.buttonImg8 span
+{
+    width: 180px;
+    margin-left: 20px;
+}
+
+.announcementsButton:checked ~ header .buttonImg8,
+.mapButton:checked ~ header .buttonImg7,
+.trafficButton:checked ~ header .buttonImg6,
+.weatherButton:checked ~ header .buttonImg5,
+.carB:checked ~ header .buttonImg4,
+.showsButton:checked ~ header .buttonImg3,
+.jokesB:checked ~ header .buttonImg2,
+.visitedB:checked ~ header .buttonImg1
+{
+    background-image: url('checked.jpg');
+}
+
+.announcementsButton:not(:checked) ~ header .buttonImg8,
+.mapButton:not(:checked) ~ header .buttonImg7,
+.trafficButton:not(:checked) ~ header .buttonImg6,
+.weatherButton:not(:checked) ~ header .buttonImg5,
+.carB:not(:checked) ~ header .buttonImg4,
+.showsButton:not(:checked) ~ header .buttonImg3,
+.jokesB:not(:checked) ~ header .buttonImg2,
+.visitedB:not(:checked) ~ header .buttonImg1
+{
+    background-image: url('unchecked.jpg');
+}
+
+.jokesB:checked ~ .center .jokes
+{
+    display: initial;
+}
+
+.showsButton:checked ~ .center .shows,
+.carB:checked ~ .center .carNews,
+.weatherButton:checked ~ .center .weather,
+.trafficButton:checked ~ .center .traffic,
+.mapButton:checked ~ .center .map,
+.announcementsButton:checked ~ .center .announcements
+{
+    visibility: visible;
+}
+
+.settingsList
+{
+    display: flex;
+    margin-right: 30px;
+}
+
+.setButton
+{
+    position: absolute;
+    display: none;
+}
+
+.options span
+{
+    display: block;
+}
+
+.options
+{
+    width: 200px;
+    transform: translateX(-30px);
+    opacity: 1;
+    border-radius: .1px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,.4);
+    background-color: #fff;
+    position: absolute;
+    margin-top: 16px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings:checked ~ header .options
+{
+    visibility: visible;
+}
+
+.login
+{
+    width: 150px;
+    margin-top: -10px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstLetter
+{
+    color: #c00;
+}
+
+.login .name
+{
+    font-weight: bold;
+}
+
+.login .details
+{
+    color: #999;
+}
+
+.top
+{
+    display: flex;
+}
+
+.logo
+{
+    transform: translate(-140px, -6px);
+    position: absolute;
+    background-image: url('https://yastatic.net/www/_/x/Q/xk8YidkhGjIGOrFm_dL5781YA.svg');
+    width: 140px;
+    height: 100px;
+}
+
+.description:hover,
+ul li:hover,
+.visited span:hover
+{
+    cursor: pointer;
+    color: #c00;
+    transition: color .15s ease-out;
+}
+
+.dateAndTime
+{
+    margin-top: 8px;
+    font-size: 13px;
+    color: #999;
+}
+
+.hiddenDescr
+{
+    margin: -2px -2px -2px 7px;
+    padding: 3px 0;
+    visibility: hidden;
+    color: #000;
+    position: absolute;
+    transform: translateY(20px);
+    border: 2px solid #999;
+}
+
+.dollar:hover ~ .hidden1
+{
+    visibility: visible;
+}
+
+.euro:hover ~ .hidden2
+{
+    visibility: visible;
+    transform: translate(80px, 20px);
+}
+
+.petrol:hover ~ .hidden3
+{
+    visibility: visible;
+    transform: translate(200px, 20px);
+}
+
+.more:hover ~ .hidden4
+{
+    visibility: visible;
+    transform: translate(330px, 20px);
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.wrapper .change
+{
+    margin-left: 3px;
+    margin-top: 1px;
+}
+
+.more
+{
+    margin-top: -4px;
+    color: #999;
+    margin-left: 12px;
+}
+
+.change
+{
+    color: #999;
+    font-size: 12px;
+}
+
+.settings
+{
+    width: 27px;
+    height: 100%;
+}
+
+.timeColumn
+{
+    display: inline;
+    animation-duration: 1s;
+    animation-name: timeBlink;
+    animation-iteration-count: infinite;
+}
+
+@keyframes timeBlink
+{
+    50%
+    {
+        color: #999;
+    }
+    to
+    {
+        color: #fff;
+    }
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.example > p
+{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.example a
+{
+    color: #a5a5a2;
+}
+
+a:hover
+{
+    cursor: pointer;
+    color: #c00;
+    transition: color .15s ease-out;
+}
+
+.wrapper
+{
+    margin-top: -12px;
+    margin-left: 24px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.yandexAd
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.yandexAdImg
+{
+    width: 120px;
+    height: 90px;
+}
+
+header
+{
+    display: flex;
+}
+
+.wrapper > div
+{
+    margin: 0 3px;
+}
+
+a
+{
+    color: #0759b9;
+}
+
+.wrapper > .description
+{
+    margin-left: 16px;
+    font-weight: 700;
+}
+
+.categories > a
+{
+    margin: 0 20px 10px 0;
+    display: inline-block;
+}
+
+.categories > a:hover
+{
+    cursor: pointer;
+    color: #c00;
+    transition: color .15s ease-out;
+}
+
+.searchLine
+{
+    display: grid;
+    grid-template-columns: 87% 88px;
+    justify-content: center;
+    width: 100%;
+}
+
+.searchLine input
+{
+    margin-top: 1px;
+    padding-left: 11px;
+    padding-right: 4px;
+    outline: none;
+    transform: translateX(-10px);
+    border: 2px solid #ffdb4d;
+    width: 713px;
+    height: 27px;
+    font: 400 13px Arial;
+}
+
+.searchLine input:valid ~ img
+{
+    visibility: hidden;
+}
+
+.mic:not(:hover),
+.keyboard:not(:hover)
+{
+    opacity: .6;
+}
+
+.searchLine .mic
+{
+    z-index: 1;
+    transform: translate(670px, 8px);
+    position: absolute;
+}
+
+.searchLine .keyboard
+{
+    z-index: 1;
+    transform: translate(690px, 8px);
+    position: absolute;
+}
+
+button
+{
+    outline: none;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    height: 34px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: url('searchButton.jpg');
+    background-repeat: no-repeat;
+}
+
+.mid
+{
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 0 30px 30px;
+}
+
+span
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.bot
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'visited shows thirdColumn'
+        'jokes carNews thirdColumn';
+    grid-column-gap: 20px;
+}
+
+h1
+{
+    font-size: 138.5%;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.visited
+{
+    visibility: hidden;
+    grid-area: visited;
+    display: flex;
+    flex-direction: column;
+}
+
+.visited > div
+{
+    margin-top: 5px;
+}
+
+.botCategory,
+.concerts
+{
+    font-weight: bold;
+}
+
+.visited,
+.jokes
+{
+    margin-left: 16px;
+}
+
+.jokes
+{
+    display: none;
+    grid-area: jokes;
+}
+
+.showMore
+{
+    transform: translateY(30px);
+    position: absolute;
+    color: #6da2e1;
+}
+
+.showMore:hover
+{
+    color: #0d44a0;
+    cursor: pointer;
+    transition: color .15s ease-out;
+}
+
+label[for='joke1'],
+label[for='joke2'],
+label[for='joke3'],
+label[for='joke4'],
+label[for='joke5']
+{
+    display: none;
+}
+
+.firstJoke,
+.secondJoke,
+.thirdJoke,
+.fourthJoke,
+.fifthJoke
+{
+    width: 250px;
+    word-wrap: break-word;
+    position: absolute;
+    visibility: hidden;
+}
+
+input[class='joke1']:checked ~ .center .firstJoke,
+input[class='joke1']:checked ~ .center label[for='joke2']
+{
+    visibility: visible;
+    display: inline;
+}
+
+input[class='joke2']:checked ~ .center .secondJoke,
+input[class='joke2']:checked ~ .center label[for='joke3']
+{
+    display: inline;
+    visibility: visible;
+}
+
+input[class='joke3']:checked ~ .center .thirdJoke,
+input[class='joke3']:checked ~ .center label[for='joke4']
+{
+    display: inline;
+    visibility: visible;
+}
+
+input[class='joke4']:checked ~ .center .fourthJoke,
+input[class='joke4']:checked ~ .center label[for='joke5']
+{
+    display: inline;
+    visibility: visible;
+}
+
+input[class='joke5']:checked ~ .center .fifthJoke,
+input[class='joke5']:checked ~ .center label[for='joke1']
+{
+    display: inline;
+    visibility: visible;
+}
+
+.refreshImg
+{
+    margin-top: 30px;
+    display: inline-block;
+    background-image: url('refresh.jpg');
+    height: 20px;
+    width: 20px;
+}
+
+.shows
+{
+    grid-area: shows;
+}
+
+.gradientTV
+{
+    background-image: linear-gradient(to right,#00a3fa,#716ef8);
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font: 13px Arial;
+    transform: scale(.88);
+    display: inline-block;
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+
+.gradientTV:hover
+{
+    transform: scale(1);
+}
+
+.shows,
+.carNews,
+.announcements
+{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.carNews
+{
+    grid-area: carNews;
+    height: 250px;
+}
+
+.thirdColumn
+{
+    grid-area: thirdColumn;
+    display: flex;
+    flex-direction: column;
+}
+
+.thirdColumn > div
+{
+    margin-bottom: 30px;
+}
+
+.weather,
+.traffic,
+.map
+{
+    visibility: hidden;
+    grid-area: weather;
+}
+
+.tempNow
+{
+    font-size: 18px;
+    display: inline;
+}
+
+.weatherMainBlock
+{
+    margin-top: -8px;
+    padding: 0;
+}
+
+.weatherMainBlock img
+{
+    transform: translateY(6px);
+}
+
+.tempNow:hover,
+.day:hover,
+.night:hover
+{
+    color: #c00;
+    cursor: pointer;
+    transition: color .15s ease-out;
+}
+
+.traffic img
+{
+    margin-top: -8px;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    transform: scaleX(-1);
+}
+
+.traffic h1 span
+{
+    margin-left: 34px;
+}
+
+.traffic span:hover
+{
+    color: #c00;
+    cursor: pointer;
+    transition: color .15s ease-out;
+}
+
+.channel,
+.timeCar,
+.type
+{
+    color: #a5a5a2;
+}
+
+.blurTop
+{
+    width: 270px;
+    height: 40px;
+    position: absolute;
+    background: linear-gradient(to top, 
+    rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    transform: translateY(35px);
+}
+
+.blurBot
+{
+    width: 270px;
+    height: 40px;
+    position: absolute;
+    background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    transform: translateY(200px);
+}
+
+.scrollArea
+{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar
+{
+    width: 0;
+    background: transparent;
+}
+
+.shows span,
+.carNews span,
+.announcements span
+{
+    word-wrap: break-word;
+    margin-top: 8px;
+}
+
+.shows .name:hover,
+.shows .channel:hover,
+.carNews .text:hover,
+.map span:hover,
+.announcements .showName:hover,
+.announcements .typeConcert:hover,
+.announcements .singer:hover
+{
+    cursor: pointer;
+    color: #c00;
+    transition: color .15s ease-out;
+}
+
+.map div
+{
+    display: flex;
+}
+
+.map span
+{
+    margin-right: 13px;
+    margin-bottom: 10px;
+}
+
+.map div
+{
+    font-weight: bold;
+}
+
+.announcements .fullInfo
+{
+    visibility: hidden;
+    position: absolute;
+    color: #fff;
+    background-color: #000;
+    transform: translate(-120px, 8px);
+    padding: 6px;
+}
+
+.announcements .fifth:hover .fullInfo
+{
+    visibility: visible;
+}
