@@ -1,5 +1,6 @@
 body
 {
+    font: 13px Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: 'h h h'
@@ -13,6 +14,9 @@ body
 
 .center
 {
+    margin: auto;
+    align-self: center;
+    width: 994px;
     grid-area: center;
 }
 
@@ -70,7 +74,7 @@ body > input
 
 .visitedB:checked ~ .center .visited
 {
-    visibility: visible;
+    display: flex;
 }
 
 .visitedB:not(:checked) ~ .jokesB:not(:checked) ~ .center .bot
@@ -78,8 +82,7 @@ body > input
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'shows thirdColumn thirdColumn'
-        'carNews thirdColumn thirdColumn';
+    grid-template-areas: 'middleColumn thirdColumn thirdColumn';
 }
 
 .showsButton:not(:checked) ~ .carB:not(:checked) ~ .center .bot
@@ -87,8 +90,7 @@ body > input
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'visited thirdColumn thirdColumn'
-        'jokes thirdColumn thirdColumn';
+    grid-template-areas: 'leftColumn thirdColumn thirdColumn';
 }
 
 .visitedB:not(:checked) ~ .carB:not(:checked) ~ .center .bot
@@ -96,8 +98,7 @@ body > input
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'thirdColumn thirdColumn thirdColumn'
-        'thirdColumn thirdColumn thirdColumn';
+    grid-template-areas: 'thirdColumn thirdColumn thirdColumn';
 }
 
 .shows,
@@ -172,18 +173,22 @@ body > input
 
 .showsButton:checked ~ .center .shows,
 .carB:checked ~ .center .carNews,
-.weatherButton:checked ~ .center .weather,
-.trafficButton:checked ~ .center .traffic,
-.mapButton:checked ~ .center .map,
 .announcementsButton:checked ~ .center .announcements
 {
-    visibility: visible;
+    display: flex;
+}
+
+.weatherButton:checked ~ .center .weather,
+.trafficButton:checked ~ .center .traffic,
+.mapButton:checked ~ .center .map
+{
+    display: initial;
 }
 
 .settingsList
 {
     display: flex;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 .setButton
@@ -246,7 +251,9 @@ body > input
 
 .top
 {
+    width: 820px;
     display: flex;
+    justify-content: space-around;
 }
 
 .logo
@@ -269,7 +276,7 @@ ul li:hover,
 
 .dateAndTime
 {
-    margin-top: 8px;
+    margin-left: 8px;
     font-size: 13px;
     color: #999;
 }
@@ -402,6 +409,7 @@ a:hover
 
 header
 {
+    margin-left: 30px;
     display: flex;
 }
 
@@ -511,9 +519,25 @@ span
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'visited shows thirdColumn'
-        'jokes carNews thirdColumn';
+    grid-template-areas: 'leftColumn middleColumn thirdColumn';
     grid-column-gap: 20px;
+}
+
+.leftColumn
+{
+    display: flex;
+    flex-direction: column;
+    grid-area: leftColumn;
+}
+
+.leftColumn div
+{
+    margin-top: 10px;
+}
+
+.middleColumn
+{
+    grid-area: middleColumn;
 }
 
 h1
@@ -526,9 +550,7 @@ h1
 
 .visited
 {
-    visibility: hidden;
-    grid-area: visited;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -546,13 +568,8 @@ h1
 .visited,
 .jokes
 {
-    margin-left: 16px;
-}
-
-.jokes
-{
     display: none;
-    grid-area: jokes;
+    margin-left: 16px;
 }
 
 .showMore
@@ -634,11 +651,6 @@ input[class='joke5']:checked ~ .center label[for='joke1']
     width: 20px;
 }
 
-.shows
-{
-    grid-area: shows;
-}
-
 .gradientTV
 {
     background-image: linear-gradient(to right,#00a3fa,#716ef8);
@@ -661,14 +673,13 @@ input[class='joke5']:checked ~ .center label[for='joke1']
 .carNews,
 .announcements
 {
-    visibility: hidden;
-    display: flex;
+    display: none;
+    margin-top: 10px;
     flex-direction: column;
 }
 
 .carNews
 {
-    grid-area: carNews;
     height: 250px;
 }
 
@@ -688,8 +699,7 @@ input[class='joke5']:checked ~ .center label[for='joke1']
 .traffic,
 .map
 {
-    visibility: hidden;
-    grid-area: weather;
+    display: none;
 }
 
 .tempNow
@@ -800,19 +810,9 @@ input[class='joke5']:checked ~ .center label[for='joke1']
     transition: color .15s ease-out;
 }
 
-.map div
-{
-    display: flex;
-}
-
 .map span
 {
     margin-right: 13px;
-    margin-bottom: 10px;
-}
-
-.map div
-{
     font-weight: bold;
 }
 
